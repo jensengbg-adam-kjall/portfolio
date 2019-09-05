@@ -20,7 +20,8 @@ a:visited {
 body {
   font-size: 18px;
   font-family: roboto, monospace;
-  color: #5d6063;
+  color: white;
+  background-color: #1a1818; 
 }
 
 header {
@@ -108,12 +109,22 @@ header {
   font-size: 4em;
 }
 
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.overview {
+  text-align: center;
+  margin: 30px 40px 0 40px;
+}
+
 .gallery {
   display: flex;
   align-items: flex-start;
   flex-flow: row wrap;
   justify-content: space-around;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .gallery-item {
@@ -126,7 +137,8 @@ header {
 
 footer {
   background-color: black;
-  margin-top: 30px;
+  margin-top: 50px;
+
 }
 footer > img {
   width: 100%;
@@ -135,10 +147,25 @@ footer > img {
   opacity: 0.7;
 }
 
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  color:  rgb(38, 196, 38);
+
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social > img ~ img {
+  margin-left: 30px;
+}
+
 /* Desktop styles */
 @media only screen and (min-width: 961px) {
-  body {
-    width: 960px;
-    margin: 0 auto;
-  }
+  
 }
