@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "LEAFY";
+  font-style: normal;
+  font-weight: normal;
+  src: local("LEAFY"), url("leafy.woff") format("woff");
+}
