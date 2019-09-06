@@ -56,7 +56,8 @@ img {
   top: 70%;
   left: 25%;
 
-  font-size: 1.4em;
+  text-transform: uppercase;
+  font-size: 1.2em;
   border-bottom: 1px solid var(--menu-links-color);
 }
 
@@ -108,12 +109,12 @@ img {
   padding: 10px;
 }
 
-.jumbotron img {
+.cover img {
   display: block;
   opacity: 0.6;
 }
 
-.jumbotron-header {
+.cover-header {
   width: 100%;
   position: absolute;
   top: 40%;
