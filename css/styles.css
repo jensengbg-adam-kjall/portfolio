@@ -35,7 +35,8 @@ body {
   font-size: 16px;
   font-family: roboto, monospace;
   color: var(--menu-links-color); 
-  background-color: #023614;
+  /*background-color:#023614;*/
+  background: linear-gradient(to right, #023614, rgb(14, 77, 35) 15% 85%, #023614);
 }
 
 header {
@@ -147,7 +148,7 @@ main {
 .gallery-item {
   display: flex;
   width: 80%;
-  background-color: #118811;
+  background-color: #25703E;
   margin-top: 100px;
   border-radius: 12px;
 }
