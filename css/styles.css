@@ -7,7 +7,7 @@
 
 :root {
   --menu-hover-color: #026e00;
-  --menu-links-color: rgb(212, 209, 209);
+  --menu-links-color: rgb(226, 224, 224);
 }
 
 * {
@@ -23,7 +23,7 @@
 }
 
 h2, h3, h4 {
-  font-family: Leafy, monospace;
+  font-family: Leafy, monospace, Arial, Helvetica, sans-serif;
   font-size: 2.5em;
 }
 
@@ -31,9 +31,13 @@ h3 {
   font-size: 2em;
 }
 
+h4 {
+  font-size: 1.5em;
+}
+
 body {
   font-size: 16px;
-  font-family: roboto, monospace;
+  font-family: monospace, sans-serif;
   color: var(--menu-links-color); 
   /*background-color:#023614;*/
   background: linear-gradient(to right, #023614, rgb(14, 77, 35) 15% 85%, #023614);
@@ -89,7 +93,6 @@ img {
   flex-direction: column;
 
   background-color: black;
-
   border-radius: 5px;
 
   position: absolute;
@@ -152,7 +155,7 @@ main {
   border-radius: 12px;
 
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
+  transition: all 0.3s linear;
 }
 
 .gallery-item:hover {
@@ -179,7 +182,7 @@ main {
 
 .gallery a:link,
 .gallery a:visited {
-  color: black;
+  color: rgb(37, 37, 37);
   font-weight: bold;
   text-decoration: none;
 }
@@ -188,13 +191,42 @@ main {
   width: 40%;
   display: flex;
   flex-flow: column wrap;
+  
   padding: 20px;
+  margin-bottom: 100px;
 }
 
 .gallery-content > * {
   margin-top: 20px;
   list-style: none;
 }
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.tools > li {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px;
+  color: rgb(37, 37, 37);
+}
+
+.tools > li img {
+  width: 100%;
+}
+
+.tools-header {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 
 footer {
   background-color: black;
@@ -222,6 +254,8 @@ footer > img {
 .social > img ~ img {
   margin-left: 30px;
 }
+
+
 
 /* Large styles */
 @media only screen and (min-width: 992px) {
