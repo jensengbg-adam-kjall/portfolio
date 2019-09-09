@@ -6,7 +6,7 @@
 }
 
 :root {
-  --menu-hover-color: #026e00;
+  --menu-hover-color: #027596;
   --menu-links-color: rgb(226, 224, 224);
 }
 
@@ -22,7 +22,9 @@
   text-decoration: none;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   font-family: Leafy, monospace, Arial, Helvetica, sans-serif;
   font-size: 2.5em;
 }
@@ -32,15 +34,24 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 
 body {
   font-size: 16px;
   font-family: monospace, sans-serif;
-  color: var(--menu-links-color); 
+  color: rgb(219, 217, 217);
   /*background-color:#023614;*/
-  background: linear-gradient(to right, #023614, rgb(14, 77, 35) 15% 85%, #023614);
+  /*background: linear-gradient(to right, #023614, rgb(14, 77, 35) 15% 85%, #023614);*/
+  background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    #000046,
+    #1cb5e0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    #000046,
+    #1cb5e0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header {
@@ -67,7 +78,7 @@ img {
 }
 
 .menu li:hover {
-  background-color: #026e00;
+  background-color: var(--menu-hover-color);
   z-index: 0;
 }
 
@@ -112,9 +123,11 @@ img {
   padding: 10px;
 }
 
+
 .cover img {
-  display: block;
   opacity: 0.6;
+  object-fit: cover;
+  height: 100vh;
 }
 
 .cover-header {
@@ -133,8 +146,9 @@ main {
 }
 
 .overview {
+  width: 50%;
   text-align: center;
-  margin: 30px 50px 0 50px;
+  margin: 2rem auto 0 auto;
 }
 
 .overview > p {
@@ -150,17 +164,18 @@ main {
 .gallery-item {
   display: flex;
   width: 80%;
-  background-color: #25703E;
+  /*background-color: #25703e;*/
+  background-color: #1cb5e0;
   margin-top: 100px;
   border-radius: 12px;
 
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s linear;
 }
 
 .gallery-item:hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item > img {
@@ -170,7 +185,7 @@ main {
 
 .gallery a:link,
 .gallery a:visited {
-  color: rgb(37, 37, 37);
+  color: rgb(71, 71, 71);
   font-weight: bold;
   text-decoration: none;
 }
@@ -179,7 +194,7 @@ main {
   width: 40%;
   display: flex;
   flex-flow: column wrap;
-  
+
   padding: 20px;
   margin-bottom: 100px;
 }
@@ -193,7 +208,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
 }
 
 .tools > li {
@@ -201,13 +215,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   padding: 10px;
   color: rgb(37, 37, 37);
 }
 
 .tools > li img {
-  width: 100%;
+  margin-bottom: 8px;
 }
 
 .tools-header {
@@ -215,35 +230,49 @@ main {
   margin-top: 3rem;
 }
 
-
 footer {
+  position: relative;
+
   background-color: black;
-  margin-top: 50px;
+  margin-top: 10rem;
 }
 footer > img {
-  display: block;
-
-  opacity: 0.7;
+  height: 30vh;
+  object-fit: cover;
+  opacity: 0.5;
 }
 
 .footer-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
-  color: var(--menu-hover-color);
+  padding: 1.5rem 3rem;
+  color: var(--menu-links-color);
 }
 
 .social {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+}
+
+.social > img {
+  width: 15%;
+  cursor: pointer;
+}
+
+.social > img:first-child {
+  width: 20%;
 }
 
 .social > img ~ img {
   margin-left: 30px;
 }
-
-
 
 /* Large styles */
 @media only screen and (min-width: 992px) {
@@ -251,5 +280,4 @@ footer > img {
 
 /* Medium styles */
 @media only screen and (min-width: 768) {
-
 }
