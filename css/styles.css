@@ -163,21 +163,9 @@ main {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-#booktropolis img:first-of-type {
-  border-radius: 12px 0 0 0;
-}
-#booktropolis img:last-of-type {
-  border-radius: 0 0 0 12px;
-}
-
-#movie-manager img {
-  border-radius: 12px 0 0 12px;
-}
-
-.gallery-image-container {
+.gallery-item > img {
   width: 60%;
-  display: flex;
-  flex-direction: column;
+  border-radius: 12px 0 0 12px;
 }
 
 .gallery a:link,
