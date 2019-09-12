@@ -8,6 +8,8 @@
 :root {
   --menu-hover-color: #027596;
   --menu-links-color: rgb(226, 224, 224);
+
+  --gallery-background-color: #B6FAFF;
 }
 
 * {
@@ -26,11 +28,11 @@ h2,
 h3,
 h4 {
   font-family: Leafy, monospace, Arial, Helvetica, sans-serif;
-  font-size: 2.5em;
+  font-size: 3.1em;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 2.3em;
 }
 
 h4 {
@@ -46,17 +48,16 @@ body {
   background: #000046; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     #000046,
-    #1cb5e0
+    #1CB5E0
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     #000046,
-    #1cb5e0
+    #1CB5E0
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header {
   position: relative;
-  background-color: black;
 }
 
 img {
@@ -79,13 +80,13 @@ img {
 
 .menu li:hover {
   background-color: var(--menu-hover-color);
-  z-index: 0;
+  z-index: 1;
 }
 
 .menu > li {
   list-style: none;
-  padding: 12px;
-  margin: 0 30px;
+  padding: 1rem;
+  margin: 0.2rem 2rem;
 }
 
 .dropdown {
@@ -103,7 +104,7 @@ img {
   display: flex;
   flex-direction: column;
 
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 
   position: absolute;
@@ -120,7 +121,8 @@ img {
 .dropdown-menu li {
   list-style: none;
   border-bottom: 1px solid var(--menu-links-color);
-  padding: 10px;
+  padding: 0.8rem 1.2rem;
+  text-transform: capitalize;
 }
 
 
@@ -165,7 +167,7 @@ main {
   display: flex;
   width: 80%;
   /*background-color: #25703e;*/
-  background-color: #1cb5e0;
+  background-color: var(--gallery-background-color);
   margin-top: 100px;
   border-radius: 12px;
 
@@ -183,6 +185,20 @@ main {
   border-radius: 12px 0 0 12px;
 }
 
+#booktropolis {
+  color: rgb(22, 22, 22);
+}
+#movie-manager {
+  background-color: #0B1413;
+  color: #DCD6CE;
+}
+#movie-manager > {
+  background-color: #0B1413;
+  color: #DCD6CE;
+}
+
+
+
 .gallery a:link,
 .gallery a:visited {
   color: rgb(71, 71, 71);
@@ -195,7 +211,7 @@ main {
   display: flex;
   flex-flow: column wrap;
 
-  padding: 20px;
+  padding: 0 20px;
   margin-bottom: 100px;
 }
 
@@ -219,6 +235,10 @@ main {
 
   padding: 10px;
   color: rgb(37, 37, 37);
+}
+
+#movie-manager .tools > li {
+  color: #DCD6CE;
 }
 
 .tools > li img {
